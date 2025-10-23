@@ -57,7 +57,7 @@ Any mistakes or revisions made along the way serve as valuable lessons to improv
 
 ---
 
-## 🪛 PCB Design Information
+## ⚛ PCB Design Information
 
 * Designed using **KiCad 9.0.3**
 * Includes **separate netclasses** for power, data, and DFPlayer audio lines
