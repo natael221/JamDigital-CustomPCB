@@ -1,0 +1,14 @@
+ERC report (2025-10-23T21:56:22+0700, Encoding UTF8)
+
+***** Sheet /
+[lib_symbol_mismatch]: Symbol 'Conn_02x08_Counter_Clockwise_MountingPin' doesn't match copy in library 'Connector_Generic_MountingPin'
+    ; warning
+    @(1750 mils, 3750 mils): Symbol J1 [Conn_02x08_Counter_Clockwise_Mount...]
+[lib_symbol_mismatch]: Symbol 'DHT11_Temperature_Humidity' doesn't match copy in library 'sensors'
+    ; warning
+    @(4900 mils, 3500 mils): Symbol DHT22 [DHT11_Temperature_Humidity]
+[lib_symbol_mismatch]: Symbol 'ESP32_NODEMCU' doesn't match copy in library 'ESP32_NODEMCU'
+    ; warning
+    @(7900 mils, 4050 mils): Symbol NodeMCU_ESP32 [ESP32_NODEMCU]
+
+ ** ERC messages: 3  Errors 0  Warnings 3
