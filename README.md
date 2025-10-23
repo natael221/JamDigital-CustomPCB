@@ -1,6 +1,6 @@
 # 🕋 Custom Digital Clock PCB (ESP32 + Arduino Nano)
 
-**Custom Digital Clock PCB** is a further development of the *Jakarta Dishub Digital Clock* project that was previously made during an internship at PUSDATIN.
+**Custom Digital Clock PCB** is a further development of the *Jakarta Dishub Digital Clock* project that was previously made during an internship at Pusdatin of Jakarta Dishub.
 This version is completely redesigned using a **self-made custom PCB** to make it cleaner, sturdier, and more efficient — without relying on breadboards or messy jumper cables anymore ⚡.
 
 ---
