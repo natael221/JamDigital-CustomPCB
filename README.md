@@ -85,7 +85,7 @@ Any mistakes or revisions made along the way serve as valuable lessons to improv
 ## 👨‍💻 Developer
 
 **Natanael Siwalette**
-Politeknik Negeri Jakarta
+Unemp😢😭
 Focus: Embedded Systems, IoT, and Real-Time Monitoring Systems
 
 📫 [LinkedIn](https://www.linkedin.com/in/natanael-siwalette)
