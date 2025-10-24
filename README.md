@@ -87,9 +87,8 @@ If you’re curious about the **original version made during the internship**, c
 
 ## 👨‍💻 Developer
 
-**Natanael Siwalette**
-*Unemployed😢😭
-
+**Natanael Siwalette**  
+Unemployed😢😭  
 Focus: Embedded Systems, IoT, and Real-Time Monitoring Systems
 
 📫 [LinkedIn](https://www.linkedin.com/in/natanael-siwalette)
