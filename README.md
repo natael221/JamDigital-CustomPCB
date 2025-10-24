@@ -26,6 +26,9 @@ Any mistakes or revisions made along the way serve as valuable lessons to improv
 
 > 🧩 In short: this project isn’t just about making a functional device — it’s about learning how electronics and PCB design work together in the real world.
 
+If you’re curious about the **original version made during the internship**, check it here:
+👉 [Jakarta Dishub Digital Clock (Prototype Version)](https://github.com/natael221/JAMDIGITALPUSDATINDISHUB)
+
 ---
 
 ## ⚙️ Main Features
@@ -85,7 +88,7 @@ Any mistakes or revisions made along the way serve as valuable lessons to improv
 ## 👨‍💻 Developer
 
 **Natanael Siwalette**
-Unemp😢😭
+Unemployed😢😭
 Focus: Embedded Systems, IoT, and Real-Time Monitoring Systems
 
 📫 [LinkedIn](https://www.linkedin.com/in/natanael-siwalette)
@@ -97,5 +100,3 @@ Focus: Embedded Systems, IoT, and Real-Time Monitoring Systems
 
 This project is open for **educational, research, and prototype development purposes**.
 Feel free to use or modify it, as long as proper credit is given 🙌.
-
----
