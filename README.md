@@ -1,161 +1,100 @@
-🕋 Custom Digital Clock PCB (ESP32 + Arduino Nano)
+# 🕋 Custom Digital Clock PCB (ESP32 + Arduino Nano)
 
-Custom Digital Clock PCB is a further development of the Jakarta Dishub Digital Clock project that was previously made during an internship at Pusdatin of Jakarta Dishub.
-This version is completely redesigned using a self-made custom PCB to make it cleaner, sturdier, and more efficient — without relying on breadboards or messy jumper cables anymore ⚡.
+![KiCad](https://img.shields.io/badge/Designed_with-KiCad_10.0.1-blue?style=for-the-badge&logo=kicad)
+![ESP32](https://img.shields.io/badge/ESP32-Main_Controller-black?style=for-the-badge&logo=espressif)
+![Arduino](https://img.shields.io/badge/Arduino_Nano-Display_Driver-00979D?style=for-the-badge&logo=arduino)
 
-🖼️ Visual Preview
+> A fully integrated, custom PCB redesign of the **Jakarta Dishub Digital Clock**, engineered to eliminate messy jumper wires and deliver a robust, production-ready hardware solution. ⚡
 
-Schematic Design
+---
 
-PCB Routing (2D)
+## 📸 Hardware Preview
 
+| 📐 Schematic Design | 🖨️ PCB Routing (2D) |
+| :---: | :---: |
+| ![Schematic](img/schem.jpg) | ![PCB Layout](img/PCB.png) |
 
+| 🧊 3D View (Front) | 🧊 3D View (Back) |
+| :---: | :---: |
+| ![3D Front](img/Front.png) | ![3D Back](img/Back.png) |
 
+---
 
+## 💡 Overview
 
-3D View (Front)
+This system goes beyond a simple clock. It acts as a real-time information hub displaying **time, date, temperature, humidity, and dynamic motivational quotes** on a **P10 LED Panel**. 
 
-3D View (Back)
+To make it fully autonomous, it features **automatic Adzan audio playback** triggered at specific times via a DFPlayer Mini, all manageable through a **Wi-Fi-based web interface** 🌐.
 
+### 🧠 Dual-Microcontroller Architecture
+To handle high-speed display multiplexing without compromising IoT capabilities, the workload is split:
+* **ESP32** → The "Brain" handling Wi-Fi, Web Server, sensor polling, and audio logic.
+* **Arduino Nano** → The "Display Driver" dedicated entirely to driving the P10 HUB12 panel via I²C commands from the ESP32.
 
+---
 
+## ⚙️ Core Features
 
+* 🕐 **Precision Timekeeping:** Driven by the highly accurate DS3231 RTC module.
+* 🌡️ **Environment Monitoring:** Real-time data processing from the DHT22 sensor.
+* 🔊 **Automated Audio:** DFPlayer Mini seamlessly plays MP3 files from an SD card.
+* 💬 **Dynamic Quotes API:** Fetches and displays daily motivation.
+* 🌐 **Local Web Interface:** Easy configuration of settings without hardcoding.
+* 🔌 **Custom PCB Design:** Two-layer board integrating all modules flawlessly.
 
-💡 Overview
+---
 
-This system displays time, date, temperature, humidity, and motivational quotes in real-time on a P10 LED Panel.
-It can also play the adzan audio automatically via the DFPlayer Mini, and provides a Wi-Fi-based web interface for configuration and monitoring 🌐.
+## 🎓 The PCB Design Journey
 
-The project uses two microcontrollers:
+This repository marks my **first dive into designing a PCB from scratch using KiCad 10.0.1**. 
 
-ESP32 → as the main controller and IoT handler
+Instead of just wiring modules together, I took the time to understand:
+* **Schematic flow and logical groupings.**
+* **Netclass configurations** for handling power vs. data lines.
+* **Trace routing** with wider tracks for power stability.
+* **ERC/DRC validation** to ensure a safe, short-circuit-free design.
 
-Arduino Nano → as the display controller for the P10 HUB12 panel
+> 🎯 *Takeaway: This wasn't just about building a clock; it was a hands-on masterclass in bridging the gap between a messy breadboard prototype and a professional hardware product.*
 
-🎓 First PCB Learning Experience
+Check out the original breadboard prototype here: 👉 [Jakarta Dishub Digital Clock v1](https://github.com/natael221/JAMDIGITALPUSDATINDISHUB)
 
-This project marks my first experience designing and creating a PCB from scratch using KiCad 9.0.3 🧠.
-From schematic design, netclass setup, routing, to DRC/ERC validation, everything was done independently as part of the learning process to understand how real hardware development works in practice.
+---
 
-Any mistakes or revisions made along the way serve as valuable lessons to improve future PCB designs — making them more efficient, safer, and production-ready ⚙️.
+## 🧰 Bill of Materials (BOM) Highlights
 
-🧩 In short: this project isn’t just about making a functional device — it’s about learning how electronics and PCB design work together in the real world.
+| Component | Role in the System |
+| :--- | :--- |
+| **ESP32 Dev Board** | Main IoT Controller |
+| **Arduino Nano** | HUB12 Display Controller |
+| **P10 LED Panel** | Main Visual Display |
+| **DHT22** | Temp & Humidity Sensor |
+| **DS3231 RTC** | Real-Time Clock |
+| **DFPlayer Mini & Speaker** | Audio Subsystem |
 
-If you’re curious about the original version made during the internship, check it here:
-👉 Jakarta Dishub Digital Clock (Prototype Version)
+---
 
-⚙️ Main Features
+## 🚀 Getting Started & Flashing Firmware
 
-Feature
+1. **Hardware Setup:** Connect both the ESP32 and Arduino Nano to your PC.
+2. **Flash ESP32:** Compile and upload `main_esp32.ino` (Target: *ESP32 Dev Module*).
+3. **Flash Nano:** Compile and upload `display_nano.ino` (Target: *Arduino Nano*, use Old Bootloader if necessary).
+4. **Prepare Audio:** Load your Adzan `.mp3` files into the root/designated folder of a FAT32 formatted SD Card and insert it into the DFPlayer.
+5. **Power Up:** Supply a stable **5V DC** to the board. The startup sequence will begin.
+6. **Network Config:** Look at the P10 display for the local IP address, connect via your browser, and start configuring! 🎉
 
-Description
+---
 
-🕐 Real-Time Clock
+## 👨‍💻 About the Developer
 
-Displays time and date using DS3231 RTC
+**Natanael Siwalette** *Embedded Systems | IoT | Hardware Enthusiast*
 
-🌡️ Temperature & Humidity Monitoring
+Currently looking for new opportunities! (Yes, officially unemployed 😢😭, but always building).
 
-DHT22 sensor data processed by ESP32
+📫 **Connect with me:** [LinkedIn](https://www.linkedin.com/in/natanael-siwalette)  
+💻 **Check out my work:** [Portfolio](https://natael221.github.io/)
 
-🔊 Automatic Adzan Audio
+---
 
-DFPlayer Mini plays audio from SD card
+## 📜 License
 
-💬 Dynamic Quotes
-
-Displays motivational quotes from an online API
-
-🌐 Web Interface
-
-Local web page for configuration & monitoring
-
-🔁 I²C Communication
-
-ESP32 sends data to Nano for P10 display updates
-
-🔌 Custom PCB
-
-All components integrated on a single board
-
-🧰 Main Components
-
-Component
-
-Function
-
-ESP32 Dev Board
-
-Main controller handling Wi-Fi, sensors, and audio
-
-Arduino Nano
-
-Controls the P10 HUB12 display
-
-DHT22
-
-Temperature & humidity sensor
-
-DS3231 RTC
-
-Accurate real-time clock module
-
-DFPlayer Mini
-
-Automatic adzan audio player
-
-P10 HUB12 LED Panel
-
-Main display for time and information
-
-Speaker
-
-Audio output from DFPlayer Mini
-
-Custom PCB
-
-Integrates all electronic components neatly
-
-🤖 PCB Design Information
-
-Designed using KiCad 9.0.3
-
-Includes separate netclasses for power, data, and DFPlayer audio lines
-
-Wider power and ground traces for current stability ⚡
-
-ERC & DRC checks show only minor warnings (no critical errors)
-
-Layout arranged for compactness, easy assembly, and clean routing
-
-🎯 The main goal of this PCB design is not just functionality, but to train a deep understanding of how schematics, netclasses, and physical layouts connect together.
-
-💻 How to Upload & Test Firmware
-
-Prepare the boards: Connect both ESP32 and Arduino Nano to your PC.
-
-Flash ESP32: Upload the main_esp32.ino using Arduino IDE (select board: ESP32 Dev Module).
-
-Flash Nano: Upload the display_nano.ino sketch (select board: Arduino Nano with old bootloader if needed).
-
-Insert SD Card: Place the adzan audio files inside the DFPlayer Mini’s SD card.
-
-Power Up: Supply 5V power — check the OLED/P10 panel for startup info.
-
-Connect Wi-Fi: Access the local IP shown on screen to open the web interface 🎉.
-
-💡 Tip: Make sure the DFPlayer Mini’s RX/TX pins are connected correctly to the ESP32, and the P10 panel’s HUB12 connector aligns with the Nano’s pinout.
-
-👨‍💻 Developer
-
-Natanael Siwalette Unemployed😢😭
-
-Focus: Embedded Systems, IoT, and Real-Time Monitoring Systems
-
-📫 LinkedIn
-💻 Portfolio
-
-📜 License
-
-This project is open for educational, research, and prototype development purposes.
-Feel free to use or modify it, as long as proper credit is given 🙌.
+This project is open-source for **educational, research, and prototype development purposes**. Feel free to fork, modify, or use it as inspiration. Proper credit is always appreciated 🙌.
