@@ -12,7 +12,7 @@
 
 | 📐 Schematic Design | 🖨️ PCB Routing (2D) |
 | :---: | :---: |
-| ![Schematic](img/schem.jpg) | ![PCB Layout](img/PCB.png) |
+| ![Schematic](img/Schem.jpg) | ![PCB Layout](img/PCB.png) |
 
 | 🧊 3D View (Front) | 🧊 3D View (Back) |
 | :---: | :---: |
