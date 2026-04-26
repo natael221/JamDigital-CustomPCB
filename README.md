@@ -1,9 +1,5 @@
 # 🕋 Custom Digital Clock PCB (ESP32 + Arduino Nano)
 
-![KiCad](https://img.shields.io/badge/Designed_with-KiCad_10.0.1-blue?style=for-the-badge&logo=kicad)
-![ESP32](https://img.shields.io/badge/ESP32-Main_Controller-black?style=for-the-badge&logo=espressif)
-![Arduino](https://img.shields.io/badge/Arduino_Nano-Display_Driver-00979D?style=for-the-badge&logo=arduino)
-
 > A fully integrated, custom PCB redesign of the **Jakarta Dishub Digital Clock**, engineered to eliminate messy jumper wires and deliver a robust, production-ready hardware solution. ⚡
 
 ---
