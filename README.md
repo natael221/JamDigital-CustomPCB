@@ -76,7 +76,7 @@ Check out the original breadboard prototype here: 👉 [Jakarta Dishub Digital C
 3. **Flash Nano:** Compile and upload `display_nano.ino` (Target: *Arduino Nano*, use Old Bootloader if necessary).
 4. **Prepare Audio:** Load your Adzan `.mp3` files into the root/designated folder of a FAT32 formatted SD Card and insert it into the DFPlayer.
 5. **Power Up:** Supply a stable **5V DC** to the board. The startup sequence will begin.
-6. **Network Config:** Look at the P10 display for the local IP address, connect via your browser, and start configuring! 🎉
+6. **Network Config:** Local IP address, connect via your browser, and start configuring! 🎉
 
 ---
 
